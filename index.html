@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alarm Clock</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Alarm Clock</h1>
+    <p class="description">Set alarms to help you manage your time effectively.</p>
+    <div class="timer-display">
+      00:00:00
+    </div>
+    <div class="container">
+      <div class="inputs">
+        <select id="hourInput"></select>
+        <select id="minuteInput"></select>
+      </div>
+      <button id="set">Add Alarm</button>
+      <h2>Active Alarms</h2>
+      <div class="activeAlarms"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #377dff, #3a8df5);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 31.25em;
+  padding: 2em;
+  position: relative;
+  border-radius: 1em;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  color: #333333;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.description {
+  font-size: 0.9em;
+  color: #666666;
+  margin-bottom: 1.5em;
+}
+
+.timer-display {
+  font-size: 2.5em;
+  font-family: "Roboto Mono", monospace;
+  color: #377dff;
+  margin-bottom: 1.5em;
+}
+
+.container h2 {
+  font-size: 1.5em;
+  color: #333333;
+  margin: 1em 0;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.inputs select {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border: 1px solid #dddddd;
+  border-radius: 0.3em;
+  background-color: #f9f9f9;
+  color: #333333;
+}
+
+#set {
+  background: linear-gradient(135deg, #377dff, #3a8df5);
+  border: none;
+  padding: 0.9em 2em;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 2em;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#set:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.activeAlarms {
+  margin-top: 1em;
+}
+
+.alarm {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  padding: 0.8em;
+  border-radius: 0.5em;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+
+.alarm span {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #333333;
+}
+
+.alarm input[type="checkbox"] {
+  appearance: none;
+  height: 2em;
+  width: 3.75em;
+  background-color: #e2e2ec;
+  border-radius: 1.25em;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.alarm input[type="checkbox"]:before {
+  position: absolute;
+  content: "";
+  background-color: #757683;
+  height: 1.43em;
+  width: 1.43em;
+  border-radius: 50%;
+  top: 0.25em;
+  left: 0.25em;
+  transition: background-color 0.3s, left 0.3s;
+}
+
+.alarm input[type="checkbox"]:checked {
+  background-color: #d2e2ff;
+}
+
+.alarm input[type="checkbox"]:checked:before {
+  background-color: #377dff;
+  left: 2em;
+}
+
+.deleteButton {
+  background-color: transparent;
+  font-size: 1.5em;
+  color: #377dff;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.deleteButton:hover {
+  color: #2a62cc;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 1.5em;
+  }
+  .timer-display {
+    font-size: 2em;
+  }
+}
